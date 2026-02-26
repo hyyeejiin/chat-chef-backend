@@ -80,6 +80,10 @@ app.post("/message", async (req, res) => {
   }
 });
 
+app.get('/', async (req, res) => {
+    await res.json({message: "Hello world"})
+})
+
 app.listen(8080, () => {
   console.log("서버 ON", process.env.CLIENT_URL);
 });

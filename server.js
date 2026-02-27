@@ -9,10 +9,16 @@ const app = express();
 dotenv.config(); // 환경변수 로드
 
 // CORS 설정
+/* 
 const corsOption = {
   origin: process.env.CLIENT_URL,
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"], // 응답헤더 설정
+};
+*/
+const corsOption = {
+  origin: process.env.CLIENT_URL,
+  credentials: true,
 };
 
 app.use(cors(corsOption));
